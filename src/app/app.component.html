@@ -13,14 +13,20 @@
         <li>Style the element (e.g. paragraph) holding your output text differently in both components</li>
       </ol>
       <hr>
-      <app-game-control>
-
+      <app-game-control 
+        (myCounter)="buildOddsEvens($event)"> 
       </app-game-control>
+
       <div class="col-xs-6">
-          <app-odd></app-odd>
+          <app-odd 
+          *ngFor="let odd of odds"
+          [oddsElement]="odd"></app-odd>
       </div>
+
       <div class="col-xs-6">
-          <app-even></app-even>
+          <app-even  
+            *ngFor="let even of evens"
+            [evensElement]="even"></app-even>
       </div>
     </div>
   </div>

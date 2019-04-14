@@ -1,3 +1,11 @@
+.gc {
+    background-color: yellow;
+    border-bottom: 4px solid orange;
+    padding: 10px 20px 20px;
+}
+h1 {
+    padding: 10px;
+}
 .btn {
     margin-left: 20px;
 }
