@@ -7,15 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-    evens = [];
-    odds = [];
+    evens: number[] = [];
+    odds: number[] = [];
 
-    buildOddsEvens(myCounter: {counterValue: number}) {
+    buildOddsEvens(myCounter: number) {
         // console.log(myCounter.counterValue);
-        if (myCounter.counterValue%2 === 0) {
-            this.evens.push(myCounter.counterValue);
+        if (myCounter%2 === 0) {
+            this.evens.push(myCounter);
         } else {
-            this.odds.push(myCounter.counterValue);
+            this.odds.push(myCounter);
         };
         // console.log(this.evens);
     }
